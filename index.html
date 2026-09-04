@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry - Animated Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Animated Sorry Sticker -->
+        <div class="sorry-sticker">
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <!-- Circle background -->
+                <circle cx="100" cy="100" r="95" fill="#FFB6C1" stroke="#FF69B4" stroke-width="3"/>
+                
+                <!-- Decorative stars -->
+                <g class="star-group">
+                    <polygon points="20,30 25,45 41,45 28,55 33,70 20,60 7,70 12,55 -1,45 15,45" fill="#FFD700"/>
+                    <polygon points="180,40 185,55 201,55 188,65 193,80 180,70 167,80 172,65 159,55 175,55" fill="#FFD700"/>
+                    <polygon points="50,170 55,185 71,185 58,195 63,210 50,200 37,210 42,195 29,185 45,185" fill="#FFD700"/>
+                </g>
+                
+                <!-- Text "Sorry" -->
+                <text x="100" y="110" font-size="48" font-weight="bold" text-anchor="middle" fill="#FF1493" font-family="Arial, sans-serif" class="sorry-text">SORRY</text>
+                
+                <!-- Sad face -->
+                <circle cx="80" cy="70" r="5" fill="#000"/>
+                <circle cx="120" cy="70" r="5" fill="#000"/>
+                <path d="M 80 95 Q 100 110 120 95" stroke="#000" stroke-width="3" fill="none" stroke-linecap="round"/>
+                
+                <!-- Tears -->
+                <circle cx="80" cy="80" r="2" fill="#87CEEB" class="tear"/>
+                <circle cx="120" cy="80" r="2" fill="#87CEEB" class="tear"/>
+            </svg>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-container">
+            <div class="slides">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <h1>I'm Truly Sorry</h1>
+                        <p>For whatever happened between us</p>
+                        <div class="heart-animation">💜</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <h1>I Regret My Actions</h1>
+                        <p>I wish I could turn back time</p>
+                        <div class="heart-animation">💔</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <h1>You Mean the World to Me</h1>
+                        <p>Your friendship is precious</p>
+                        <div class="heart-animation">💙</div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <h1>Let's Start Fresh</h1>
+                        <p>Can we please talk?</p>
+                        <div class="heart-animation">💚</div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <h1>I Promise to Do Better</h1>
+                        <p>Your forgiveness means everything</p>
+                        <div class="heart-animation">🧡</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
+
+            <!-- Slide Indicators -->
+            <div class="indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
